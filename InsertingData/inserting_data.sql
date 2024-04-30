@@ -71,7 +71,7 @@ CREATE Table cats6(
 
 
 -- describe table 
-DESC cats6;
+DESC cats;
 
 -- auto increment - insert data
 INSERT into cats6 (name, age) values
@@ -82,4 +82,5 @@ INSERT into cats6 (name, age) values
  ("temp5", 50),
  ("temp6", 60);
 
-
+-- describe table 
+SELECT * FROM cats6;
