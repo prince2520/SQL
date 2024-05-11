@@ -94,7 +94,12 @@ alter table companies MODIFY company_name VARCHAR(100) default 'unknown';
 
 -- rename and modify column
 ALTER TABLE companies
-CHANGE address biz_name VARCHAR(50);
+CHANGE biz_name address VARCHAR(50);
+
+-- add constraint 
+alter table houses add constraint positive_pprice check(purchase_price >= 0);
+
+insert into houses(sale_price, purchase_price)  VALUES (100, -4);
 
 -- desc companies
 DESC companies;
